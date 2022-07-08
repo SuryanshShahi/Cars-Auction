@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+body {
+  background: url("./components/images/hero.png") no-repeat;
+  height: fit-content;
+  
+}
+*{
+  scroll-behavior: smooth;
+}
+.arrow2 {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all ease-in-out 0.3s;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.6);
+}
+.effects:hover .arrow2 {
+  opacity: 1;
+}
+.navbar.active {
+  background-color: rgb(66 7 165);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.modalcompare {
+  background: url("./components/images/hero.png") no-repeat;
+  height: fit-content;
+}
+#interior {
+  display: none;
+}
+.wishlist {
+  background-color: white;
+  border-width: thin;
+  border-color: gray;
+  border-style: solid;
+  color: "#FF9800";
+  outline: "none";
+  font-weight: "500";
+  font-size: "19px";
+  transition: 0.3s;
+}
+.wishlist:hover {
+  background-color: #ff9800;
+  border: none;
+  color: white;
+}
+.rounded-pill {
+  background-color: #ff9800;
+}
+.rounded-pill:hover {
+  background-color: #f9a426;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#footer {
+  background-color: #172337;
+}
+#footer span {
+  font-size: 11.5px;
+  font-family: Roboto, Arial, sans-serif;
+}
+#footer li {
+  line-height: 2;
+  font-size: 11.5px;
+  font-weight: 400;
+  font-family: Roboto, Arial, sans-serif;
+}
+#footer p {
+  margin-bottom: 0;
+  font-size: 11.5px;
+  font-family: Roboto, Arial, sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.emailInput {
+  outline: none;
+  display: block;
+  border-radius: 70px;
+  padding: 11px;
+  background-color: rgba(156, 152, 152, 0.815);
+  box-shadow: none;
+  max-width: 500px;
+  transition: all 0.5s linear;
+}
+.subscribe.btn {
+  border-radius: 50px;
+  background-color: #ff9800;
+  padding: 10px 17.5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.subscribe.btn:hover {
+  background-color: #f9a426;
+  color: white;
+}
+.emailInput::placeholder {
+  color: black;
+}
+
+#footer {
+  background: rgb(66 7 165);
+}
+.hello1 {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  background-color: #ffe7c6;
+  line-height: 48px;
+  color: #ff9800;
+  transition: 0.7s;
+  cursor: pointer;
+}
+.hello1:hover {
+  background-color: #ff9800;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#newsletter{
+  background: url("./components/images/footer1.png");
 }
