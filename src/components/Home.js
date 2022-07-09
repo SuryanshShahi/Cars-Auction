@@ -332,7 +332,7 @@ function Home() {
                     <div>
                       <div
                         className="text-center text-white mt-4"
-                        style={{ fontSize: "6vh" }}
+                        style={{ fontSize: "4.6vh" }}
                       >
                         SELL YOUR CAR AT THE BEST PRICE
                       </div>
