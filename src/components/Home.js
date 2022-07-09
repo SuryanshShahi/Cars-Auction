@@ -7,7 +7,7 @@ import swal from "sweetalert";
 
 function Home() {
   const [count, setCount] = useState(82);
-
+  const [searchTerm, setSearchTerm] = useState("");
   const show = () => {
     var x = document.getElementById("exterior");
     var y = document.getElementById("interior");
@@ -19,7 +19,9 @@ function Home() {
       y.style.display = "none";
     }
   };
-
+  const changeHeading = (e) => {
+    setSearchTerm(e.target.value);
+  };
   return (
     <section id="home">
       <div
@@ -542,7 +544,6 @@ function Home() {
           </div>
         </div>
       </div>
-      
 
       <div className="modal fade " id="mymodal" style={{ background: "white" }}>
         <div className="modal-dialog modal-fullscreen">
@@ -1021,6 +1022,7 @@ function Home() {
                             ></div>
                             <input
                               type="search"
+                              onChange={changeHeading}
                               placeholder="Search car brand"
                               className="position-relative py-2 rounded w-100 form-control"
                               style={{ paddingLeft: "40px" }}
@@ -1033,7 +1035,17 @@ function Home() {
                             className="row py-2"
                             style={{ height: "450px", overflowY: "scroll" }}
                           >
-                            {Logo.map((e) => {
+                            {Logo.filter((e) => {
+                              if (searchTerm === "") {
+                                return e;
+                              } else if (
+                                e.logoname
+                                  .toLowerCase()
+                                  .includes(searchTerm.toLowerCase())
+                              ) {
+                                return e;
+                              }
+                            }).map((e) => {
                               return (
                                 <div className="col-lg-4 col-sm-6 col-12 pb-4">
                                   <div
@@ -1072,6 +1084,7 @@ function Home() {
                             ></div>
                             <input
                               type="search"
+                              onChange={changeHeading}
                               placeholder="Search car model"
                               className="position-relative py-2 rounded w-100 form-control"
                               style={{ paddingLeft: "40px" }}
@@ -1084,9 +1097,19 @@ function Home() {
                             className="row"
                             style={{ height: "450px", overflowY: "scroll" }}
                           >
-                            {Model.map((e) => {
+                            {Model.filter((e) => {
+                              if (searchTerm === "") {
+                                return e;
+                              } else if (
+                                e.name
+                                  .toLowerCase()
+                                  .includes(searchTerm.toLowerCase())
+                              ) {
+                                return e;
+                              }
+                            }).map((e) => {
                               return (
-                                <div className="col-12">
+                                <div className="col-lg-6 col-md-6 col-12">
                                   <div
                                     className="p-2 my-2 text-center ModelBtn"
                                     style={{
@@ -1116,6 +1139,7 @@ function Home() {
                             ></div>
                             <input
                               type="search"
+                              onChange={changeHeading}
                               placeholder="Car Manufacturing Year"
                               className="position-relative py-2 rounded w-100 form-control"
                               style={{ paddingLeft: "40px" }}
@@ -1126,9 +1150,19 @@ function Home() {
                             className="row pt-3"
                             style={{ height: "500px", overflowY: "scroll" }}
                           >
-                            {Year.map((e) => {
+                            {Year.filter((e) => {
+                              if (searchTerm === "") {
+                                return e;
+                              } else if (
+                                e.year
+                                  .toLowerCase()
+                                  .includes(searchTerm.toLowerCase())
+                              ) {
+                                return e;
+                              }
+                            }).map((e) => {
                               return (
-                                <div className="col-12">
+                                <div className="col-lg-6 col-md-6 col-12">
                                   <div
                                     className="p-2 my-2 text-center ModelBtn"
                                     style={{
@@ -1235,6 +1269,7 @@ function Home() {
                             ></div>
                             <input
                               type="search"
+                              onChange={changeHeading}
                               placeholder="Search car Registration State"
                               className="position-relative py-2 rounded w-100 form-control"
                               style={{ paddingLeft: "40px" }}
@@ -1257,9 +1292,19 @@ function Home() {
                             className="row"
                             style={{ height: "430px", overflowY: "scroll" }}
                           >
-                            {State.map((e) => {
+                            {State.filter((e) => {
+                              if (searchTerm === "") {
+                                return e;
+                              } else if (
+                                e.state
+                                  .toLowerCase()
+                                  .includes(searchTerm.toLowerCase())
+                              ) {
+                                return e;
+                              }
+                            }).map((e) => {
                               return (
-                                <div className="col-12">
+                                <div className="col-lg-6 col-md-6 col-12">
                                   <div
                                     className="p-2 my-2 text-center ModelBtn"
                                     style={{
@@ -1332,105 +1377,105 @@ function Home() {
               </div>
 
               <div
-                className="justify-content-center d-flex"
+                className="justify-content-center d-flex mx-2"
                 style={{ marginTop: "100px" }}
               >
-                <div
-                  className="bg-white p-3 shadow-lg w-75"
-                  style={{ borderRadius: "20px" }}
-                >
-                  <div style={{ fontSize: "30px", fontWeight: "500" }}>
-                    Purchasing
-                  </div>
-                  <div className="nav nav-tabs table pt-4">
-                    <div
-                      className="active font-weight-bolder px-2 py-2 tab rounded-0 text-decoration-none"
-                      type="button"
-                      data-toggle="tab"
-                      href="#Current"
-                    >
-                      Current
+                  <div
+                    className="bg-white p-3 shadow-lg container"
+                    style={{ borderRadius: "20px", width: "100%" }}
+                  >
+                    <div style={{ fontSize: "30px", fontWeight: "500" }}>
+                      Purchasing
                     </div>
-                    <div
-                      className="mx-3 font-weight-bolder px-2 py-2 tab rounded-0 text-decoration-none"
-                      type="button"
-                      data-toggle="tab"
-                      href="#Pending"
-                    >
-                      Pending
-                    </div>
-                    <div
-                      className="mx-3 font-weight-bolder px-2 py-2 tab rounded-0 text-decoration-none"
-                      type="button"
-                      data-toggle="tab"
-                      href="#Pending"
-                    >
-                      History
-                    </div>
-                  </div>
-                  <div className="tab-content">
-                    <div id="Current" className="active tab-pane">
+                    <div className="nav nav-tabs table pt-4 w-100">
                       <div
-                        className="my-4"
-                        style={{ height: "400px", overflow: "scroll" }}
+                        className="active font-weight-bolder px-2 py-2 tab rounded-0 text-decoration-none"
+                        type="button"
+                        data-toggle="tab"
+                        href="#Current"
                       >
-                        <table>
-                          <tr
-                            className="position-sticky text-white"
-                            style={{ top: "0", background: "#172337" }}
-                          >
-                            <th>Item</th>
-                            <th>Bid Price</th>
-                            <th>Highest Bid</th>
-                            <th>Lowest Bid</th>
-                            <th>Expires</th>
-                          </tr>
-                          {table.map((e) => {
-                            return (
-                              <tr>
-                                <td>{e.item}</td>
-                                <td>{e.bid}</td>
-                                <td>{e.highest}</td>
-                                <td>{e.lowest}</td>
-                                <td>{e.expires}</td>
-                              </tr>
-                            );
-                          })}
-                        </table>
+                        Current
+                      </div>
+                      <div
+                        className="mx-3 font-weight-bolder px-2 py-2 tab rounded-0 text-decoration-none"
+                        type="button"
+                        data-toggle="tab"
+                        href="#Pending"
+                      >
+                        Pending
+                      </div>
+                      <div
+                        className="mx-3 font-weight-bolder px-2 py-2 tab rounded-0 text-decoration-none"
+                        type="button"
+                        data-toggle="tab"
+                        href="#Pending"
+                      >
+                        History
                       </div>
                     </div>
-                    <div id="Pending" className="tab-pane fade">
-                      <div
-                        className="my-4"
-                        style={{ height: "400px", overflow: "scroll" }}
-                      >
-                        <table>
-                          <tr
-                            className="position-sticky text-white"
-                            style={{ top: "0", background: "#172337" }}
-                          >
-                            <th>Item</th>
-                            <th>Bid Price</th>
-                            <th>Highest Bid</th>
-                            <th>Lowest Bid</th>
-                            <th>Expires</th>
-                          </tr>
-                          {table.map((e) => {
-                            return (
-                              <tr>
-                                <td>{e.item}</td>
-                                <td>{e.bid}</td>
-                                <td>{e.highest}</td>
-                                <td>{e.lowest}</td>
-                                <td>{e.expires}</td>
-                              </tr>
-                            );
-                          })}
-                        </table>
+                    <div className="tab-content">
+                      <div id="Current" className="active tab-pane">
+                        <div
+                          className="my-4"
+                          style={{ height: "400px", overflow: "scroll" }}
+                        >
+                          <table>
+                            <tr
+                              className="position-sticky text-white"
+                              style={{ top: "0", background: "#172337" }}
+                            >
+                              <th>Item</th>
+                              <th>Bid Price</th>
+                              <th>Highest Bid</th>
+                              <th>Lowest Bid</th>
+                              <th>Expires</th>
+                            </tr>
+                            {table.map((e) => {
+                              return (
+                                <tr>
+                                  <td>{e.item}</td>
+                                  <td>{e.bid}</td>
+                                  <td>{e.highest}</td>
+                                  <td>{e.lowest}</td>
+                                  <td>{e.expires}</td>
+                                </tr>
+                              );
+                            })}
+                          </table>
+                        </div>
+                      </div>
+                      <div id="Pending" className="tab-pane fade">
+                        <div
+                          className="my-4"
+                          style={{ height: "400px", overflow: "scroll" }}
+                        >
+                          <table>
+                            <tr
+                              className="position-sticky text-white"
+                              style={{ top: "0", background: "#172337" }}
+                            >
+                              <th>Item</th>
+                              <th>Bid Price</th>
+                              <th>Highest Bid</th>
+                              <th>Lowest Bid</th>
+                              <th>Expires</th>
+                            </tr>
+                            {table.map((e) => {
+                              return (
+                                <tr>
+                                  <td>{e.item}</td>
+                                  <td>{e.bid}</td>
+                                  <td>{e.highest}</td>
+                                  <td>{e.lowest}</td>
+                                  <td>{e.expires}</td>
+                                </tr>
+                              );
+                            })}
+                          </table>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
               </div>
 
               <div className="justify-content-center d-flex py-5">
