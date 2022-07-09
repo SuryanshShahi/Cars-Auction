@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import car from "./images/car.jpg";
 import newsletter from "./images/newsletter.png";
-import Data from "./Data";
+import { Data, Logo, Model, Year, Range, State } from "./Data";
 import swal from "sweetalert";
 
 function Home() {
@@ -73,8 +73,11 @@ function Home() {
                 >
                   <div className="position-absolute w-100">
                     <div
-                    className="text-white d-flex px-3"
-                    style={{ background: "black", borderRadius:"20px 20px 0px 0px" }}
+                      className="text-white d-flex px-3"
+                      style={{
+                        background: "black",
+                        borderRadius: "20px 20px 0px 0px",
+                      }}
                     >
                       <div style={{ fontSize: "12px" }}>Airtel | Jio 4G</div>
                       <div className="ml-auto align-items-center d-flex">
@@ -287,7 +290,10 @@ function Home() {
                 <div className="position-absolute w-100">
                   <div
                     className="text-white d-flex px-3"
-                    style={{ background: "black", borderRadius:"20px 20px 0px 0px" }}
+                    style={{
+                      background: "black",
+                      borderRadius: "20px 20px 0px 0px",
+                    }}
                   >
                     <div style={{ fontSize: "12px" }}>Airtel | Jio 4G</div>
                     <div className="ml-auto align-items-center d-flex">
@@ -390,7 +396,7 @@ function Home() {
                     </div>
                     <div className="justify-content-center align-items-center d-flex pb-3 pt-2">
                       <div
-                        className="rounded-pill border-0 px-lg-4 py-1 mb-4 text-white mt-4"
+                        className="rounded-pill border-0 px-lg-4 py-1 my-4 text-white"
                         style={{
                           width: "fit-content",
                           fontWeight: "500",
@@ -672,9 +678,7 @@ function Home() {
                       </div>
                     </div>
                     <hr></hr>
-                    <div
-                      className="d-flex py-3"
-                    >
+                    <div className="d-flex py-3">
                       <span className="fa fa-gavel fa-3x"></span>
                       <input
                         type="text"
@@ -828,271 +832,491 @@ function Home() {
         </div>
       </div>
 
-      <div className="modal fade " id="mymodal1" style={{ background: "white" }}>
-        <div className="modal-dialog modal-fullscreen">
-          <div className="modal-content modalcompare">
-            <div className="">
-              <div className="d-flex">
-                <h1 className="text-white p-4 ">
-                  CARS
-                  <span
-                    className="font-weight-bolder"
-                    style={{ color: "#ff9800" }}
+      <div
+        className="modal fade "
+        id="mymodal1"
+        style={{ background: "white" }}
+      >
+        <div className="modal-dialog modal-fullscreen" style={{height:"fit-content"}}>
+          <div className="modal-content modalcompare1">
+            <div style={{ background: "rgba(0, 0, 0, 0.7)" }}>
+              <div className="">
+                <div className="d-flex">
+                  <h1 className="text-white p-4 ">
+                    CARS
+                    <span
+                      className="font-weight-bolder"
+                      style={{ color: "#ff9800" }}
+                    >
+                      Auction
+                    </span>
+                  </h1>
+                  <div
+                    className="pr-5 pt-3 fa-2x ml-auto"
+                    data-dismiss="modal"
+                    style={{ cursor: "pointer" }}
                   >
-                    Auction
-                  </span>
-                </h1>
-                <div
-                  className="pr-5 pt-3 fa-2x ml-auto"
-                  data-dismiss="modal"
-                  style={{ cursor: "pointer" }}
-                >
-                  &times;
+                    &times;
+                  </div>
+                </div>
+                <div className="text-center text-white my-4 justify-content-center d-flex">
+                  <div
+                    className="px-3"
+                    style={{
+                      fontSize: "17px",
+                      fontWeight: "500",
+                      background: "black",
+                      borderRadius: "50px",
+                    }}
+                  >
+                    Welcome to
+                    <span
+                      className="pl-1"
+                      style={{ color: "#ff9800", fontWeight: "500" }}
+                    >
+                      CarsAuction
+                    </span>
+                  </div>
                 </div>
               </div>
-              <div className="text-center text-white my-4 justify-content-center d-flex">
-                <div
-                  className="px-3"
-                  style={{
-                    fontSize: "17px",
-                    fontWeight: "500",
-                    background: "black",
-                    borderRadius: "50px",
-                  }}
-                >
-                  Welcome to
-                  <span
-                    className="pl-1"
-                    style={{ color: "#ff9800", fontWeight: "500" }}
-                  >
-                    CarsAuction
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div
-              className=""
-              style={{
-                height: "30vh",
-              }}
-            >
-              {Data.map((e) => {
-                return (
-                  <div>
-                    <div className="justify-content-center d-flex">
-                      <div className="">
-                        <div className="px-4 pt-4" id="exterior">
-                          {e.exterior}
-                        </div>
-                        <div className="px-4 pt-4" id="interior">
-                          {e.interior}
-                        </div>
+
+              <div className="">
+                <div className="justify-content-center d-flex py-3">
+                  <div className="px-lg-5">
+                    <div
+                      className="text-white text-center"
+                      style={{ fontSize: "8vh" }}
+                    >
+                      SELL YOUR CAR AT THE BEST PRICE
+                    </div>
+                    <div className="text-center text-white pt-3">
+                      <div className="fa fa-check-circle px-lg-5 px-2 pt-3" style={{fontSize:"3vh"}}>
+                        &nbsp;Sell From Your Home
+                      </div>
+                      <div className="fa fa-check-circle px-lg-5 px-2 pt-3" style={{fontSize:"3vh"}}>
+                        &nbsp;Instant Payment
+                      </div>
+                      <div className="fa fa-check-circle px-lg-5 px-2 pt-3" style={{fontSize:"3vh"}}>
+                        &nbsp;Free RC Transfer
                       </div>
                     </div>
                   </div>
-                );
-              })}
-              <div className="justify-content-center d-flex py-4">
-                <button
-                  className="rounded-pill border-0 text-white px-lg-5 py-2"
-                  style={{ outline: "none", fontWeight: "500" }}
-                  onClick={show}
-                >
-                  Interior view
-                </button>
-              </div>
-
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-8 col-12">
+                </div>
+                
+                <div className="justify-content-center d-flex ">
+                  <div className="mx-2">
                     <div
-                      className="font-weight-bolder"
-                      style={{ fontSize: "3.5rem" }}
+                      className="nav nav-tabs bg-white pt-3 px-2 d-flex shadow-lg mt-5 justify-content-center d-flex"
+                      style={{ borderRadius: "10px" }}
                     >
-                      Kia Seltos
-                    </div>
-                    <div>
-                      <span
-                        className="pr-3"
-                        style={{ borderRight: "2px solid grey" }}
+                      <div
+                        className="active justify-content-center align-items-center mb-3 mx-2 d-flex py-3 tab px-5 py-3"
+                        type="button"
+                        data-toggle="tab"
+                        href="#brand"
                       >
-                        Listing ID: 14076242
-                      </span>
-                      <span className="px-3">Item #: 7300-3356862</span>
-                    </div>
+                        Brand
+                      </div>
 
-                    <div
-                      className="container my-4 px-4 py-5 shadow-lg"
-                      style={{ background: "#ebf2ff", borderRadius: "20px" }}
-                    >
-                      <div className="d-flex pb-4">
-                        <div
-                          className=""
-                          style={{ fontSize: "1.5rem", fontWeight: "500" }}
-                        >
-                          Current Price
-                        </div>
-                        <div
-                          className="ml-auto text-success font-weight-bolder"
-                          style={{ fontSize: "2.4rem" }}
-                        >
-                          US $700.00
-                        </div>
+                      <div
+                        className="tab justify-content-center align-items-center mb-3 mx-2 d-flex px-5 py-3"
+                        type="button"
+                        data-toggle="tab"
+                        href="#model"
+                      >
+                        {" "}
+                        Model
                       </div>
-                      <div className="d-flex">
-                        <div style={{ fontSize: "1rem", color: "#52606d" }}>
-                          Buyer's Premium
-                        </div>
-                        <div className="ml-auto" style={{ fontSize: "1.5rem" }}>
-                          10.00%
-                        </div>
+
+                      <div
+                        className="tab justify-content-center align-items-center mb-3 mx-2 d-flex px-5 py-3"
+                        type="button"
+                        data-toggle="tab"
+                        href="#year"
+                      >
+                        {" "}
+                        Year
                       </div>
-                      <div className="d-flex">
-                        <div style={{ fontSize: "1rem", color: "#52606d" }}>
-                          Bid Increment (US)
-                        </div>
-                        <div className="ml-auto" style={{ fontSize: "1.5rem" }}>
-                          $50.00
-                        </div>
+
+                      <div
+                        className="tab justify-content-center align-items-center mb-3 mx-2 d-flex px-5 py-3"
+                        type="button"
+                        data-toggle="tab"
+                        href="#variant"
+                      >
+                        {" "}
+                        Variant
                       </div>
-                    </div>
-                    <hr></hr>
-                    <div
-                      className="d-flex py-3"
-                      style={{ width: "100%", overflowX: "scroll" }}
-                    >
-                      <span className="fa fa-gavel fa-3x"></span>
-                      <input
-                        type="text"
-                        className="form-control mx-4 pl-4"
-                        placeholder="Enter your bid amount"
-                        style={{
-                          borderRadius: "50px",
-                          fontSize: "1.2rem",
-                          height: "55px",
-                          maxWidth: "64%",
-                        }}
-                        required
-                      />
+
+                      <div
+                        className="tab justify-content-center align-items-center mb-3 mx-2 d-flex px-5 py-3"
+                        type="button"
+                        data-toggle="tab"
+                        href="#kms"
+                      >
+                        {" "}
+                        Kms Driven
+                      </div>
+
+                      <div
+                        className="tab justify-content-center align-items-center mb-3 mx-2 d-flex px-5 py-3"
+                        type="button"
+                        data-toggle="tab"
+                        href="#state"
+                      >
+                        {" "}
+                        Reg. State
+                      </div>
+
+                      <div
+                        className="tab justify-content-center align-items-center mb-3 mx-2 d-flex px-5 py-3"
+                        type="button"
+                        data-toggle="tab"
+                        href="#mobile"
+                      >
+                        {" "}
+                        Mobile no.
+                      </div>
+
                       <button
-                        className="border-0 text-white rounded-pill px-lg-5 shadow-sm"
+                        className="btn text-white border-0 mx-2 mb-3"
                         style={{
+                          height: "57px",
                           outline: "none",
                           fontWeight: "500",
+                          background: "#ff9800",
+                          borderRadius: "10px",
                         }}
-                        onClick={() => setCount(count + 1)}
                       >
-                        Submit A Bid
+                        GET CAR PRICE
                       </button>
                     </div>
-                    <hr></hr>
 
                     <div
-                      className="d-flex kiaSeltos"
-                      style={{ width: "100%", overflowX: "scroll" }}
-                    >
-                      <div>
-                        <button
-                          className="btn btn-primary border-0 rounded-pill px-lg-5 shadow-sm"
-                          style={{
-                            outline: "none",
-                            height: "55px",
-                            fontWeight: "500",
-                          }}
-                        >
-                          BUY NOW: $4,200
-                        </button>
-                      </div>
-                      <div className="px-5">
-                        <button
-                          className="wishlist px-lg-5 px-4 shadow-sm"
-                          style={{
-                            height: "55px",
-                            borderRadius: "30px",
-                          }}
-                        >
-                          <span className="fa fa-star pr-2"></span>
-                          Add To Wishlist
-                        </button>
-                      </div>
-                      <div className="align-items-center d-flex ml-auto">
-                        <span style={{ fontWeight: "500", fontSize: "1.2rem" }}>
-                          Share to:
-                        </span>
-                        <span className="fa fa-facebook px-2 fa-lg"></span>
-                        <span className="fa fa-twitter px-2 fa-lg"></span>
-                        <span className="fa fa-linkedin px-2 fa-lg"></span>
-                        <span className="fa fa-instagram px-2 fa-lg"></span>
-                      </div>
-                    </div>
-                    <hr></hr>
-                  </div>
-                  <div className="col-lg-4 col-12 pl-lg-4 mt-4">
-                    <div
-                      className="container py-5 "
+                      className="bg-white px-3"
                       style={{
-                        border: "1px dashed grey",
-                        borderRadius: "30px",
+                        maxWidth: "500px",
+                        height: "600px",
+                        borderRadius: "10px",
                       }}
                     >
-                      <div
-                        className="text-center"
-                        style={{ fontSize: "1.3rem", fontWeight: "500" }}
-                      >
-                        This Auction Ends in:
-                      </div>
-                      <div
-                        className="text-center"
-                        style={{ fontSize: "2.2rem", color: "#ff9800" }}
-                      >
-                        0d : 7h : 51m : 56s
-                      </div>
-                      <hr style={{ height: "1.5px" }}></hr>
-
-                      <div>
-                        <div>
-                          <span
-                            className="fa fa-users fa-2x"
-                            style={{ color: "#ff9800" }}
-                          ></span>
-                          <span
-                            className="font-weight-bolder"
-                            style={{
-                              fontSize: "2.6rem",
-                              paddingLeft: "30px",
-                            }}
+                      <div className="tab-content">
+                        {/*Popular Brands*/}
+                        <div
+                          className="container my-4 py-4 bg-white ml-0 active tab-pane"
+                          id="brand"
+                        >
+                          <div className="align-items-center d-flex">
+                            {" "}
+                            <div
+                              className="fa fa-search position-absolute pl-3"
+                              style={{ zIndex: "1", color: "#ff9800" }}
+                            ></div>
+                            <input
+                              type="search"
+                              placeholder="Search car brand"
+                              className="position-relative py-2 rounded w-100 form-control"
+                              style={{ paddingLeft: "40px" }}
+                            />
+                          </div>
+                          <div className="py-3" style={{ fontWeight: "500" }}>
+                            Popular Brands
+                          </div>
+                          <div
+                            className="row py-2"
+                            style={{ height: "450px", overflowY: "scroll" }}
                           >
-                            61
-                          </span>
-                          <div style={{ paddingLeft: "65px" }}>
-                            Active Bidders
+                            {Logo.map((e) => {
+                              return (
+                                <div className="col-lg-4 col-sm-6 col-12 pb-4">
+                                  <div
+                                    className="card shadow border-0 rounded-0 text-center pb-1 pt-3"
+                                    data-bs-toggle="tooltip"
+                                    title={e.logoname}
+                                  >
+                                    <div className="text-center">
+                                      <img
+                                        src={e.image2}
+                                        alt="menupic"
+                                        className="img-fluid"
+                                      />
+                                    </div>
+
+                                    <h6 className="text-center pt-3 font-weight-bold">
+                                      {e.logoname}
+                                    </h6>
+                                  </div>
+                                </div>
+                              );
+                            })}
                           </div>
                         </div>
-                        <div className="py-2">
-                          <span
-                            className="fa fa-eye"
-                            style={{ color: "#ff9800", fontSize: "2.5rem" }}
-                          ></span>
-                          <span
-                            className="font-weight-bolder pl-4"
-                            style={{ fontSize: "2.6rem" }}
+
+                        {/*Models*/}
+                        <div
+                          className="container my-4 py-4 bg-white ml-0 tab-pane fade"
+                          id="model"
+                        >
+                          <div className="align-items-center d-flex">
+                            {" "}
+                            <div
+                              className="fa fa-search position-absolute pl-3"
+                              style={{ zIndex: "1", color: "#ff9800" }}
+                            ></div>
+                            <input
+                              type="search"
+                              placeholder="Search car model"
+                              className="position-relative py-2 rounded w-100 form-control"
+                              style={{ paddingLeft: "40px" }}
+                            />
+                          </div>
+                          <div className="py-3" style={{ fontWeight: "500" }}>
+                            All Models
+                          </div>
+                          <div
+                            className="row"
+                            style={{ height: "450px", overflowY: "scroll" }}
                           >
-                            203
-                          </span>
-                          <div style={{ paddingLeft: "65px" }}>Watching</div>
+                            {Model.map((e) => {
+                              return (
+                                <div className="col-12">
+                                  <div
+                                    className="p-2 my-2 text-center ModelBtn"
+                                    style={{
+                                      border: "1px solid blue",
+                                      fontWeight: "500",
+                                      borderRadius: "10px",
+                                    }}
+                                  >
+                                    {e.name}
+                                  </div>
+                                </div>
+                              );
+                            })}
+                          </div>
                         </div>
-                        <div>
-                          <span
-                            className="fa fa-gavel"
-                            style={{ color: "#ff9800", fontSize: "2.5rem" }}
-                          ></span>
-                          <span
-                            className="font-weight-bolder pl-4"
-                            style={{ fontSize: "2.6rem" }}
+
+                        {/*Year*/}
+                        <div
+                          className="container my-4 py-4 bg-white ml-0 tab-pane fade"
+                          id="year"
+                        >
+                          <div className="align-items-center d-flex">
+                            {" "}
+                            <div
+                              className="fa fa-search position-absolute pl-3"
+                              style={{ zIndex: "1", color: "#ff9800" }}
+                            ></div>
+                            <input
+                              type="search"
+                              placeholder="Car Manufacturing Year"
+                              className="position-relative py-2 rounded w-100 form-control"
+                              style={{ paddingLeft: "40px" }}
+                            />
+                          </div>
+
+                          <div
+                            className="row pt-3"
+                            style={{ height: "500px", overflowY: "scroll" }}
                           >
-                            {count}
-                          </span>
-                          <div style={{ paddingLeft: "65px" }}>Total Bids</div>
+                            {Year.map((e) => {
+                              return (
+                                <div className="col-12">
+                                  <div
+                                    className="p-2 my-2 text-center ModelBtn"
+                                    style={{
+                                      border: "1px solid blue",
+                                      fontWeight: "500",
+                                      borderRadius: "10px",
+                                    }}
+                                  >
+                                    {e.year}
+                                  </div>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+
+                        {/*Variant*/}
+                        <div
+                          className="container my-4 py-4 bg-white ml-0 tab-pane fade"
+                          id="variant"
+                        >
+                          <div className="" style={{ fontWeight: "500" }}>
+                            Filter by fuel type
+                            <div className="d-flex my-4">
+                              <div
+                                className="mr-4 p-2 my-2 text-center ModelBtn"
+                                style={{
+                                  border: "1px solid blue",
+                                  fontWeight: "500",
+                                  borderRadius: "10px",
+                                }}
+                              >
+                                Petrol
+                              </div>
+                              <div
+                                className="p-2 my-2 text-center ModelBtn"
+                                style={{
+                                  border: "1px solid blue",
+                                  fontWeight: "500",
+                                  borderRadius: "10px",
+                                }}
+                              >
+                                CNG
+                              </div>
+                            </div>
+                            Filter by transmission type
+                            <div className="mt-4">
+                              <div
+                                className="py-2 px-5 my-2 text-center ModelBtn"
+                                style={{
+                                  border: "1px solid blue",
+                                  fontWeight: "500",
+                                  width: "fit-content",
+                                  borderRadius: "10px",
+                                }}
+                              >
+                                Manual
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/*Kms Driven*/}
+                        <div
+                          className="container my-4 py-4 bg-white ml-0 tab-pane fade"
+                          id="kms"
+                        >
+                          <div className="py-3" style={{ fontWeight: "500" }}>
+                            Select your range
+                          </div>
+                          <div
+                            className="row"
+                            style={{ height: "450px", overflowY: "scroll" }}
+                          >
+                            {Range.map((e) => {
+                              return (
+                                <div className="col-12">
+                                  <div
+                                    className="p-2 my-2 text-center ModelBtn"
+                                    style={{
+                                      border: "1px solid blue",
+                                      fontWeight: "500",
+                                      borderRadius: "10px",
+                                    }}
+                                  >
+                                    {e.kms}
+                                  </div>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+
+                        {/*States*/}
+                        <div
+                          className="container my-4 py-4 bg-white ml-0 tab-pane fade"
+                          id="state"
+                        >
+                          <div className="align-items-center d-flex">
+                            {" "}
+                            <div
+                              className="fa fa-search position-absolute pl-3"
+                              style={{ zIndex: "1", color: "#ff9800" }}
+                            ></div>
+                            <input
+                              type="search"
+                              placeholder="Search car Registration State"
+                              className="position-relative py-2 rounded w-100 form-control"
+                              style={{ paddingLeft: "40px" }}
+                            />
+                          </div>
+                          <div
+                            className="py-3 d-flex align-items-center"
+                            style={{ fontWeight: "500" }}
+                          >
+                            <div>Select States</div>
+
+                            <input
+                              type="search"
+                              placeholder="Type your RTO code"
+                              className="position-relative py-2 rounded w-50 form-control ml-auto"
+                              style={{ paddingLeft: "40px" }}
+                            />
+                          </div>
+                          <div
+                            className="row"
+                            style={{ height: "430px", overflowY: "scroll" }}
+                          >
+                            {State.map((e) => {
+                              return (
+                                <div className="col-12">
+                                  <div
+                                    className="p-2 my-2 text-center ModelBtn"
+                                    style={{
+                                      border: "1px solid blue",
+                                      fontWeight: "500",
+                                      borderRadius: "10px",
+                                    }}
+                                  >
+                                    {e.state}
+                                  </div>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+
+                        {/*MobileNo.*/}
+                        <div
+                          className="my-4 pt-4 bg-white ml-0 tab-pane fade"
+                          id="mobile"
+                        >
+                          <div className="px-4" style={{ fontWeight: "500" }}>
+                            Enter your mobile no.
+                            <div className="my-4">
+                              <div className="input-group mb-3">
+                                <div className="input-group-prepend">
+                                  <span
+                                    className="input-group-text py-3"
+                                    id="basic-addon1"
+                                  >
+                                    +91
+                                  </span>
+                                </div>
+                                <input
+                                  type="tel"
+                                  className="form-control py-3"
+                                  placeholder="Enter your mobile no."
+                                />
+                              </div>
+                              <div className="align-items-center d-flex">
+                                <input
+                                  type="checkbox"
+                                  className="mr-2 my-4 larger"
+                                />
+                                Allow notifications on{" "}
+                                <span
+                                  className="fa fa-whatsapp mx-1 mt-1 text-white bg-success"
+                                  style={{ borderRadius: "50px" }}
+                                ></span>
+                                WhatsApp
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="text-center py-2"
+                            style={{
+                              background: "rgb(216, 232, 243)",
+                              fontSize: "12px",
+                              fontWeight: "500",
+                            }}
+                          >
+                            We respect privacy and your information is secure
+                            with us
+                          </div>
                         </div>
                       </div>
                     </div>
