@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import car from "./images/car.jpg";
 import newsletter from "./images/newsletter.png";
-import { Data, Logo, Model, Year, Range, State } from "./Data";
+import { Data, Logo, Model, Year, Range, State, table } from "./Data";
 import swal from "sweetalert";
 
 function Home() {
@@ -837,7 +837,10 @@ function Home() {
         id="mymodal1"
         style={{ background: "white" }}
       >
-        <div className="modal-dialog modal-fullscreen" style={{height:"fit-content"}}>
+        <div
+          className="modal-dialog modal-fullscreen"
+          style={{ height: "fit-content" }}
+        >
           <div className="modal-content modalcompare1">
             <div style={{ background: "rgba(0, 0, 0, 0.7)" }}>
               <div className="">
@@ -890,20 +893,29 @@ function Home() {
                       SELL YOUR CAR AT THE BEST PRICE
                     </div>
                     <div className="text-center text-white pt-3">
-                      <div className="fa fa-check-circle px-lg-5 px-2 pt-3" style={{fontSize:"3vh"}}>
+                      <div
+                        className="fa fa-check-circle px-lg-5 px-2 pt-3"
+                        style={{ fontSize: "3vh" }}
+                      >
                         &nbsp;Sell From Your Home
                       </div>
-                      <div className="fa fa-check-circle px-lg-5 px-2 pt-3" style={{fontSize:"3vh"}}>
+                      <div
+                        className="fa fa-check-circle px-lg-5 px-2 pt-3"
+                        style={{ fontSize: "3vh" }}
+                      >
                         &nbsp;Instant Payment
                       </div>
-                      <div className="fa fa-check-circle px-lg-5 px-2 pt-3" style={{fontSize:"3vh"}}>
+                      <div
+                        className="fa fa-check-circle px-lg-5 px-2 pt-3"
+                        style={{ fontSize: "3vh" }}
+                      >
                         &nbsp;Free RC Transfer
                       </div>
                     </div>
                   </div>
                 </div>
-                
-                <div className="justify-content-center d-flex ">
+
+                <div className="justify-content-center d-flex sell">
                   <div className="mx-2">
                     <div
                       className="nav nav-tabs bg-white pt-3 px-2 d-flex shadow-lg mt-5 justify-content-center d-flex"
@@ -1324,15 +1336,110 @@ function Home() {
                 </div>
               </div>
 
-              <div className="justify-content-center d-flex py-5">
-                <button
-                  className="rounded-pill border-0 text-white px-lg-5 py-2"
-                  style={{ outline: "none", fontWeight: "500" }}
-                  data-dismiss="modal"
-                >
-                  Exit
-                </button>
+            
+              <div className="justify-content-center d-flex" style={{marginTop:"100px"}}>
+                <div className="bg-white p-3 shadow-lg w-75" style={{ borderRadius:"20px" }}>
+                  <div style={{fontSize:"30px", fontWeight:"500"}}>Purchasing</div>
+                  <div className="nav nav-tabs table pt-4">
+                    <div
+                      className="active font-weight-bolder px-2 py-2 tab rounded-0 text-decoration-none"
+                      type="button"
+                      data-toggle="tab"
+                      href="#Current"
+                    >
+                      Current
+                    </div>
+                    <div
+                      className="mx-3 font-weight-bolder px-2 py-2 tab rounded-0 text-decoration-none"
+                      type="button"
+                      data-toggle="tab"
+                      href="#Pending"
+                    >
+                      Pending
+                    </div>
+                    <div
+                      className="mx-3 font-weight-bolder px-2 py-2 tab rounded-0 text-decoration-none"
+                      type="button"
+                      data-toggle="tab"
+                      href="#Pending"
+                    >
+                      History
+                    </div>
+                  </div>
+                  <div className="tab-content">
+                    <div id="Current" className="active tab-pane">
+                      <div
+                        className="my-4"
+                        style={{ height: "400px", overflow: "scroll" }}
+                      >
+                        <table>
+                          <tr
+                            className="position-sticky text-white"
+                            style={{ top: "0", background: "#172337" }}
+                          >
+                            <th>Item</th>
+                            <th>Bid Price</th>
+                            <th>Highest Bid</th>
+                            <th>Lowest Bid</th>
+                            <th>Expires</th>
+                          </tr>
+                          {table.map((e) => {
+                            return (
+                              <tr>
+                                <td>{e.item}</td>
+                                <td>{e.bid}</td>
+                                <td>{e.highest}</td>
+                                <td>{e.lowest}</td>
+                                <td>{e.expires}</td>
+                              </tr>
+                            );
+                          })}
+                        </table>
+                      </div>
+                    </div>
+                    <div id="Pending" className="tab-pane fade">
+                      <div
+                        className="my-4"
+                        style={{ height: "300px", overflow: "scroll" }}
+                      >
+                        <table>
+                          <tr
+                            className="position-sticky text-white"
+                            style={{ top: "0", background: "#172337" }}
+                          >
+                            <th>Item</th>
+                            <th>Bid Price</th>
+                            <th>Highest Bid</th>
+                            <th>Lowest Bid</th>
+                            <th>Expires</th>
+                          </tr>
+                          {table.map((e) => {
+                            return (
+                              <tr>
+                                <td>{e.item}</td>
+                                <td>{e.bid}</td>
+                                <td>{e.highest}</td>
+                                <td>{e.lowest}</td>
+                                <td>{e.expires}</td>
+                              </tr>
+                            );
+                          })}
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+
+              <div className="justify-content-center d-flex py-5">
+              <button
+                className="rounded-pill border-0 text-white px-lg-5 py-2"
+                style={{ outline: "none", fontWeight: "500" }}
+                data-dismiss="modal"
+              >
+                Exit
+              </button>
+            </div>
             </div>
           </div>
         </div>

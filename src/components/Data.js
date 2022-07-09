@@ -359,3 +359,48 @@ export const State = [
   { state: "Lakshadweep" },
   { state: "Puducherry" },
 ];
+
+export const table = [
+  {
+    item: "2018 Hyundai Sonata",
+    bid: "$1,775.00",
+    highest: "$1,775.00",
+    lowest: "$1,400.00",
+    expires: "15/07/2022",
+  },
+  {
+    item: "2018 Hyundai Sonata",
+    bid: "$1,775.00",
+    highest: "$1,775.00",
+    lowest: "$1,400.00",
+    expires: "15/07/2022",
+  },
+  {
+    item: "2018 Hyundai Sonata",
+    bid: "$1,775.00",
+    highest: "$1,775.00",
+    lowest: "$1,400.00",
+    expires: "15/07/2022",
+  },
+  {
+    item: "2018 Hyundai Sonata",
+    bid: "$1,775.00",
+    highest: "$1,775.00",
+    lowest: "$1,400.00",
+    expires: "15/07/2022",
+  },
+  {
+    item: "2018 Hyundai Sonata",
+    bid: "$1,775.00",
+    highest: "$1,775.00",
+    lowest: "$1,400.00",
+    expires: "15/07/2022",
+  },
+  {
+    item: "2018 Hyundai Sonata",
+    bid: "$1,775.00",
+    highest: "$1,775.00",
+    lowest: "$1,400.00",
+    expires: "15/07/2022",
+  },
+];
