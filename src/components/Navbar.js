@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
-  const [B, setHeader] = useState(false);
+  const [B, setHeader] = useState(true);
   const [navbar, setNavbar] = useState(false);
   const changeBackground = () => {
     if (window.scrollY >= 150) {
       setNavbar(true);
-      setHeader(true);
+      setHeader(false);
     } else {
       setNavbar(false);
-      setHeader(false);
+      setHeader(true);
     }
   };
   window.addEventListener("scroll", changeBackground);

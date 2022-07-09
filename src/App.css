@@ -10,6 +10,9 @@ body {
   width: 0px;
   height: 0px;
 }
+.B.active {
+  background: rgba(0, 0, 0, 0.6);
+}
 .arrow2 {
   opacity: 0;
   position: absolute;
