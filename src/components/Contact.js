@@ -24,7 +24,6 @@ function Contact() {
                 Us
               </span>
             </div>
-            <hr className="w-50 mx-auto text-success"></hr>
           </div>
         </div>
         <div className="px-2">

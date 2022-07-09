@@ -8,6 +8,7 @@ import Home from "./components/Home";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact.js";
 import Navbar from "./components/Navbar";
+import WhyUs from "./components/WhyUs";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/contact" component={Contact} />
+          <Route exact path="/whyus" component={WhyUs} />
 
           <Redirect to="/" />
         </Switch>

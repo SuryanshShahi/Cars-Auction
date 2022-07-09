@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
@@ -14,7 +15,7 @@ function Navbar() {
     }
   };
   window.addEventListener("scroll", changeBackground);
-
+  const history = useHistory();
   return (
     <section className="mt-5">
       <header className="fixed-top" id="header">
@@ -60,21 +61,20 @@ function Navbar() {
                   </NavLink>
                 </li>
                 <li className="nav-item text-decoration-none px-3 py-2">
-                  <NavLink
-                    to="/"
+                  <a
+                    href="#newsletter"
                     activeClassName="menu_active"
                     className="nav-link text-white"
-                    onClick={() => window.scrollTo(0, 850)}
+                    onClick={() => history.push("/")}
                   >
                     Newsletter
-                  </NavLink>
+                  </a>
                 </li>
                 <li className="nav-item text-decoration-none px-3 py-2">
                   <NavLink
-                    to="/"
+                    to="/whyus"
                     activeClassName="menu_active"
                     className="nav-link text-white"
-                    onClick={() => window.scrollTo(0, 950)}
                   >
                     Why Us
                   </NavLink>

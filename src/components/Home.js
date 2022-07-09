@@ -28,9 +28,7 @@ function Home() {
       >
         <div
           className="px-5 pb-lg-2 pb-md-2 pt-lg-0 pt-md-0 py-4 m-2 shadow-lg text-center heading"
-          style={{
-           
-          }}
+          style={{}}
         >
           A whole new world of cars!
         </div>
@@ -544,23 +542,7 @@ function Home() {
           </div>
         </div>
       </div>
-
-      <div className="container justify-content-center d-flex" id="whyus">
-        <div
-          className="text-dark py-1 px-5"
-          style={{
-            fontSize: "17px",
-            fontWeight: "500",
-            background: "#ffe7c6",
-            borderRadius: "50px",
-          }}
-        >
-          Why{" "}
-          <span className="font-weight-bolder" style={{ color: "#ff9800" }}>
-            Us
-          </span>
-        </div>
-      </div>
+      
 
       <div className="modal fade " id="mymodal" style={{ background: "white" }}>
         <div className="modal-dialog modal-fullscreen">
