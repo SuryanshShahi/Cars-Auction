@@ -26,29 +26,29 @@ function WhyUs() {
             </div>
           </div>
         </div>
-        <div className="justify-content-center d-flex my-5">
+        <div className="justify-content-center d-flex my-5" style={{height:"100%"}}>
           <div
-            className="bg-white shadow-lg"
-            style={{ height: "500px", width: "800px", borderRadius: "50px" }}
+            className="bg-white shadow-lg m-2"
+            style={{ maxWidth: "800px", height:"100%", borderRadius: "50px" }}
           >
-            <ul className="m-5">
-              <li className="pt-4">
+            <ul className="m-lg-5 my-5 mx-2">
+              <li className="pb-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </li>
-              <li className="pt-4">
+              <li className="pb-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </li>
-              <li className="pt-4">
+              <li className="pb-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </li>
-              <li className="pt-4">
+              <li className="pb-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </li>
-              <li className="pt-4">
+              <li className="">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </li>
