@@ -6,6 +6,7 @@ import { Data, Logo, Model, Year, Range, State, table } from "./Data";
 import swal from "sweetalert";
 
 function Home() {
+  window.onload(setSearchTerm(""));
   const [count, setCount] = useState(82);
   const [searchTerm, setSearchTerm] = useState("");
   const show = () => {
