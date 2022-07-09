@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import car from "./images/car.jpg";
 import newsletter from "./images/newsletter.png";
@@ -6,7 +6,6 @@ import { Data, Logo, Model, Year, Range, State, table } from "./Data";
 import swal from "sweetalert";
 
 function Home() {
-  
   const [count, setCount] = useState(82);
   const [searchTerm, setSearchTerm] = useState("");
   const show = () => {
@@ -23,6 +22,10 @@ function Home() {
   const changeHeading = (e) => {
     setSearchTerm(e.target.value);
   };
+  useEffect(() => {
+    setSearchTerm("");
+  }, []);
+
   return (
     <section id="home">
       <div
