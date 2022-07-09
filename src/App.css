@@ -220,5 +220,6 @@ td {
 @media (max-width: 900px) {
   .heading {
     font-size: 30px;
+    background: black;
   }
 }
