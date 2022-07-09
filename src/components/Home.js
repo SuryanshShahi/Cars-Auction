@@ -22,7 +22,20 @@ function Home() {
 
   return (
     <section id="home">
-      <div className="row gx-0 mb-5" style={{ marginTop: "250px" }}>
+      <div
+        className="text-white justify-content-center d-flex align-items-center"
+        style={{ marginTop: "150px" }}
+      >
+        <div
+          className="px-5 pb-lg-2 pb-md-2 pt-lg-0 pt-md-0 py-4 m-2 shadow-lg text-center heading"
+          style={{
+           
+          }}
+        >
+          A whole new world of cars!
+        </div>
+      </div>
+      <div className="row gx-0 mb-5" style={{ marginTop: "100px" }}>
         <div className="col-lg-6 col-md-6 col-12 justify-content-center d-flex p-3">
           <div className="">
             <div
@@ -1336,10 +1349,17 @@ function Home() {
                 </div>
               </div>
 
-            
-              <div className="justify-content-center d-flex" style={{marginTop:"100px"}}>
-                <div className="bg-white p-3 shadow-lg w-75" style={{ borderRadius:"20px" }}>
-                  <div style={{fontSize:"30px", fontWeight:"500"}}>Purchasing</div>
+              <div
+                className="justify-content-center d-flex"
+                style={{ marginTop: "100px" }}
+              >
+                <div
+                  className="bg-white p-3 shadow-lg w-75"
+                  style={{ borderRadius: "20px" }}
+                >
+                  <div style={{ fontSize: "30px", fontWeight: "500" }}>
+                    Purchasing
+                  </div>
                   <div className="nav nav-tabs table pt-4">
                     <div
                       className="active font-weight-bolder px-2 py-2 tab rounded-0 text-decoration-none"
@@ -1432,14 +1452,14 @@ function Home() {
               </div>
 
               <div className="justify-content-center d-flex py-5">
-              <button
-                className="rounded-pill border-0 text-white px-lg-5 py-2"
-                style={{ outline: "none", fontWeight: "500" }}
-                data-dismiss="modal"
-              >
-                Exit
-              </button>
-            </div>
+                <button
+                  className="rounded-pill border-0 text-white px-lg-5 py-2"
+                  style={{ outline: "none", fontWeight: "500" }}
+                  data-dismiss="modal"
+                >
+                  Exit
+                </button>
+              </div>
             </div>
           </div>
         </div>

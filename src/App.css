@@ -191,14 +191,14 @@ ul li a {
   transition: 0.5s;
 }
 
-
 .modalcompare1 {
   background: url("./components/images/ownersbg.jpg") no-repeat;
   background-attachment: fixed;
   background-size: cover;
   height: fit-content;
 }
-.tab-content th, td{
+.tab-content th,
+td {
   padding: 25px;
   border-width: 1px;
   width: 100%;
@@ -207,7 +207,18 @@ ul li a {
   border-style: solid;
 }
 
-.table .active{
+.table .active {
   border-bottom: 4px solid #e43c5c;
   border-radius: 10px;
+}
+.heading {
+  font-size: 65px;
+  background: #1414149c;
+  border-radius: 150px;
+  transition: 0.5s;
+}
+@media (max-width: 900px) {
+  .heading {
+    font-size: 30px;
+  }
 }
