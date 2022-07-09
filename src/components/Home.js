@@ -1402,7 +1402,7 @@ function Home() {
                     <div id="Pending" className="tab-pane fade">
                       <div
                         className="my-4"
-                        style={{ height: "300px", overflow: "scroll" }}
+                        style={{ height: "400px", overflow: "scroll" }}
                       >
                         <table>
                           <tr
