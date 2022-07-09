@@ -165,6 +165,7 @@ function Footer() {
                     style={{
                       fontSize: "14px",
                       fontFamily: "Roboto,Arial,sans-serif",
+                      width:"max-content"
                     }}
                   >
                     © 2007-2021 CarsAuction.com
