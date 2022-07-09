@@ -14,6 +14,7 @@ function Navbar() {
     }
   };
   window.addEventListener("scroll", changeBackground);
+
   return (
     <section className="mt-5">
       <header className="fixed-top" id="header">
@@ -59,23 +60,24 @@ function Navbar() {
                   </NavLink>
                 </li>
                 <li className="nav-item text-decoration-none px-3 py-2">
-                  <a
+                  <NavLink
+                    to="/"
                     activeClassName="menu_active"
                     className="nav-link text-white"
-                    href="#newsletter"
-
+                    onClick={() => window.scrollTo(0, 850)}
                   >
                     Newsletter
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item text-decoration-none px-3 py-2">
-                  <a
+                  <NavLink
+                    to="/"
                     activeClassName="menu_active"
                     className="nav-link text-white"
-                    href="#whyus"
+                    onClick={() => window.scrollTo(0, 950)}
                   >
                     Why Us
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item text-decoration-none px-3 py-2">
                   <NavLink
@@ -83,7 +85,7 @@ function Navbar() {
                     className="nav-link text-white"
                     to="/contact"
                   >
-                    Contact
+                    Contact Us
                   </NavLink>
                 </li>
                 <li className="nav-item text-decoration-none px-3 py-2">

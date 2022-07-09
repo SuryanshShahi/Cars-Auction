@@ -10,8 +10,10 @@ body {
   width: 0px;
   height: 0px;
 }
+@media (max-width:990px){
 .B.active {
   background: rgba(0, 0, 0, 0.6);
+}
 }
 .arrow2 {
   opacity: 0;

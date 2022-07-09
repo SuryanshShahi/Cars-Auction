@@ -4,14 +4,22 @@ function Contact() {
   return (
     <section id="contact">
       <div className="pt-5">
-        <div className="container w-50 hey h-100 mt-2">
-          <h1 className="text-center text-white pt-3">
-            Contact{" "}
+        <div className="container w-50 hey h-100 mt-2 justify-content-center d-flex">
+          <div className="text-center text-white pt-3">
+          <div className="px-3" style={{
+            fontSize: "17px",
+            fontWeight: "500",
+            width:"fit-content",
+            background: "black",
+            borderRadius: "50px",
+          }}>  
+          Contact{" "}
             <span className="" style={{ color: "#ff9800", fontWeight: "500" }}>
               Us
             </span>
-          </h1>
+          </div>
           <hr className="w-50 mx-auto text-success"></hr>
+        </div>
         </div>
         <div
           className="card shadow-sm container my-5 pt-3 animation shadow-lg border-0"
@@ -27,7 +35,7 @@ function Contact() {
 
           <div className="container justify-content-center d-flex">
             <div className="row">
-              <div className="col-lg-4 col-md-4 col-sm-4 pt-5">
+              <div className="col-lg-4 col-md-4 col-12 pt-5">
                 <div className="fa fa-map-marker fa-2x hello1 text-center"></div>
                 <label className="fa-lg pl-3" style={{ fontWeight: "500" }}>
                   Location:
@@ -58,11 +66,11 @@ function Contact() {
                 <br></br>
               </div>
 
-              <div className="col-lg-8 col-md-8 col-sm-8">
-                <div className="mx-auto py-5 w-auto px-5">
+              <div className="col-lg-8 col-md-8 col-12">
+                <div className="mx-auto py-5 w-auto px-lg-5">
                   <form>
                     <div className="row">
-                      <div className="col-lg-6 col-md-4">
+                      <div className="col-lg-6 col-md-6">
                         <div className="mb-3">
                           <label className="" style={{ fontWeight: "500" }}>
                             Full Name:
@@ -77,7 +85,7 @@ function Contact() {
                           />
                         </div>
                       </div>
-                      <div className="col-lg-6 col-md-4">
+                      <div className="col-lg-6 col-md-6">
                         <div className="mb-3">
                           <label className="" style={{ fontWeight: "500" }}>
                             Phone:
@@ -118,7 +126,7 @@ function Contact() {
                     </div>
                     <button
                       type="submit"
-                      className="btn forbtn px-4 py-2 text-white"
+                      className="btn rounded-pill px-4 py-2 text-white"
                       to="/"
                     >
                       Send Message

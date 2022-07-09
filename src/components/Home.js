@@ -280,6 +280,7 @@ function Home() {
                   ></div>
                 </div>
               </div>
+  
               <div className="effects position-relative">
                 <NavLink
                   className="text-decoration-none"
@@ -325,81 +326,14 @@ function Home() {
                       </div>
                     </div>
                   </div>
-                  <img
-                    src={car}
-                    className="img-fluid"
-                    style={{ borderRadius: "20px 20px 0px 0px" }}
-                    alt="car"
-                  />
-                  <div
-                    className="mt-2"
-                    style={{
-                      fontSize: "1.6rem",
-                      fontWeight: "500",
-                      color: "black",
-                    }}
-                  >
-                    Kia Seltos
+                 <div>
+                  <div style={{fontSize:"48px"}}>SELL YOUR CAR AT THE BEST PRICE</div>
+                <div>
+                <div className="fa fa-"></div>
+                </div>
                   </div>
-                  <hr></hr>
-                  <div className="row gx-0 py-2">
-                    <div className="col-6">
-                      <div className="row gx-0">
-                        <div className="col-4 justify-content-center align-items-center d-flex">
-                          <div className="fa fa-gavel fa-2x text-center text-success"></div>
-                        </div>
-                        <div
-                          className="col-8"
-                          style={{ borderRight: "2px solid grey" }}
-                        >
-                          <div
-                            className="text-success"
-                            style={{ fontWeight: "500" }}
-                          >
-                            Current Bid
-                          </div>
-                          <div style={{ fontSize: "25px" }}>$876.00</div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="col-6">
-                      <div className="row gx-0">
-                        <div className="col-4 justify-content-center align-items-center d-flex">
-                          <div className="fa fa-suitcase fa-2x text-center text-danger"></div>
-                        </div>
-                        <div className="col-8">
-                          <div
-                            className="text-danger"
-                            style={{ fontWeight: "500" }}
-                          >
-                            Buy Now
-                          </div>
-                          <div style={{ fontSize: "25px" }}>$500.00</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <hr></hr>
-                  <div className="d-flex py-2">
-                    <div
-                      className="w-75 pl-3"
-                      style={{
-                        color: "#ff6983",
-                        fontWeight: "500",
-                        fontSize: "1.2rem",
-                        borderRight: "2px solid grey",
-                      }}
-                    >
-                      0d : 7h : 51m : 56s
-                    </div>
-                    <div
-                      className="text-success text-center w-25"
-                      style={{ fontWeight: "500" }}
-                    >
-                      {count} Bids
-                    </div>
-                  </div>
+                
+                  
                   <div className="justify-content-center align-items-center d-flex pt-2">
                     <div
                       className="rounded-pill border-0 px-lg-4 py-1 mb-4 text-white mt-4"
@@ -438,6 +372,7 @@ function Home() {
                 </NavLink>
               </div>
             </div>
+  
             <div className="justify-content-center d-flex">
               <a
                 href="#"
@@ -575,12 +510,21 @@ function Home() {
                   &times;
                 </div>
               </div>
-              <h4 className="text-center text-white my-4 font-weight-bold">
-                Welcome to{" "}
-                <span className="font-weight-bold" style={{ color: "#ff9800" }}>
-                  CarsAuction
+              <div
+                className="text-center text-white my-4 justify-content-center d-flex"
+              >
+              <div className="px-3" style={{
+                fontSize: "17px",
+                fontWeight: "500",
+                background: "black",
+                borderRadius: "50px",
+              }}>
+                Welcome to
+                <span className="pl-1" style={{ color: "#ff9800",fontWeight: "500", }}>
+                CarsAuction
                 </span>
-              </h4>
+              </div>
+            </div>
             </div>
             <div
               className=""
@@ -669,7 +613,10 @@ function Home() {
                       </div>
                     </div>
                     <hr></hr>
-                    <div className="d-flex py-3" style={{ width: "100%", overflowX: "scroll" }}>
+                    <div
+                      className="d-flex py-3"
+                      style={{ width: "100%", overflowX: "scroll" }}
+                    >
                       <span className="fa fa-gavel fa-3x"></span>
                       <input
                         type="text"
@@ -688,7 +635,6 @@ function Home() {
                         style={{
                           outline: "none",
                           fontWeight: "500",
-                        
                         }}
                         onClick={() => setCount(count + 1)}
                       >
@@ -708,7 +654,6 @@ function Home() {
                             outline: "none",
                             height: "55px",
                             fontWeight: "500",
-                          
                           }}
                         >
                           BUY NOW: $4,200
