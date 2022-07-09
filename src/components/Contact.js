@@ -21,6 +21,7 @@ function Contact() {
           <hr className="w-50 mx-auto text-success"></hr>
         </div>
         </div>
+        <div className="px-2">
         <div
           className="card shadow-sm container my-5 pt-3 animation shadow-lg border-0"
           style={{ borderRadius: "20px" }}
@@ -136,6 +137,7 @@ function Contact() {
               </div>
             </div>
           </div>
+        </div>
         </div>
         <br></br>
       </div>
