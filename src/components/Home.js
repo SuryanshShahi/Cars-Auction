@@ -7,7 +7,7 @@ import swal from "sweetalert";
 
 function Home() {
   const [count, setCount] = useState(82);
-  const [searchTerm, setSearchTerm] = useState(" ");
+  const [searchTerm, setSearchTerm] = useState("");
   const show = () => {
     var x = document.getElementById("exterior");
     var y = document.getElementById("interior");
