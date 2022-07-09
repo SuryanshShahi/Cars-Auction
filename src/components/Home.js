@@ -7,7 +7,7 @@ import swal from "sweetalert";
 
 function Home() {
   const [count, setCount] = useState(82);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState(" ");
   const show = () => {
     var x = document.getElementById("exterior");
     var y = document.getElementById("interior");
@@ -922,6 +922,7 @@ function Home() {
                         type="button"
                         data-toggle="tab"
                         href="#brand"
+                        onClick={() => setSearchTerm("")}
                       >
                         Brand
                       </div>
@@ -931,6 +932,7 @@ function Home() {
                         type="button"
                         data-toggle="tab"
                         href="#model"
+                        onClick={() => setSearchTerm("")}
                       >
                         {" "}
                         Model
@@ -941,6 +943,7 @@ function Home() {
                         type="button"
                         data-toggle="tab"
                         href="#year"
+                        onClick={() => setSearchTerm("")}
                       >
                         {" "}
                         Year
@@ -971,6 +974,7 @@ function Home() {
                         type="button"
                         data-toggle="tab"
                         href="#state"
+                        onClick={() => setSearchTerm("")}
                       >
                         {" "}
                         Reg. State
@@ -1380,102 +1384,102 @@ function Home() {
                 className="justify-content-center d-flex mx-2"
                 style={{ marginTop: "100px" }}
               >
-                  <div
-                    className="bg-white p-3 shadow-lg container"
-                    style={{ borderRadius: "20px", width: "100%" }}
-                  >
-                    <div style={{ fontSize: "30px", fontWeight: "500" }}>
-                      Purchasing
+                <div
+                  className="bg-white p-3 shadow-lg container"
+                  style={{ borderRadius: "20px", width: "100%" }}
+                >
+                  <div style={{ fontSize: "30px", fontWeight: "500" }}>
+                    Purchasing
+                  </div>
+                  <div className="nav nav-tabs table pt-4 w-100">
+                    <div
+                      className="active font-weight-bolder px-2 py-2 tab rounded-0 text-decoration-none"
+                      type="button"
+                      data-toggle="tab"
+                      href="#Current"
+                    >
+                      Current
                     </div>
-                    <div className="nav nav-tabs table pt-4 w-100">
+                    <div
+                      className="mx-3 font-weight-bolder px-2 py-2 tab rounded-0 text-decoration-none"
+                      type="button"
+                      data-toggle="tab"
+                      href="#Pending"
+                    >
+                      Pending
+                    </div>
+                    <div
+                      className="mx-3 font-weight-bolder px-2 py-2 tab rounded-0 text-decoration-none"
+                      type="button"
+                      data-toggle="tab"
+                      href="#Pending"
+                    >
+                      History
+                    </div>
+                  </div>
+                  <div className="tab-content">
+                    <div id="Current" className="active tab-pane">
                       <div
-                        className="active font-weight-bolder px-2 py-2 tab rounded-0 text-decoration-none"
-                        type="button"
-                        data-toggle="tab"
-                        href="#Current"
+                        className="my-4"
+                        style={{ height: "400px", overflow: "scroll" }}
                       >
-                        Current
-                      </div>
-                      <div
-                        className="mx-3 font-weight-bolder px-2 py-2 tab rounded-0 text-decoration-none"
-                        type="button"
-                        data-toggle="tab"
-                        href="#Pending"
-                      >
-                        Pending
-                      </div>
-                      <div
-                        className="mx-3 font-weight-bolder px-2 py-2 tab rounded-0 text-decoration-none"
-                        type="button"
-                        data-toggle="tab"
-                        href="#Pending"
-                      >
-                        History
+                        <table>
+                          <tr
+                            className="position-sticky text-white"
+                            style={{ top: "0", background: "#172337" }}
+                          >
+                            <th>Item</th>
+                            <th>Bid Price</th>
+                            <th>Highest Bid</th>
+                            <th>Lowest Bid</th>
+                            <th>Expires</th>
+                          </tr>
+                          {table.map((e) => {
+                            return (
+                              <tr>
+                                <td>{e.item}</td>
+                                <td>{e.bid}</td>
+                                <td>{e.highest}</td>
+                                <td>{e.lowest}</td>
+                                <td>{e.expires}</td>
+                              </tr>
+                            );
+                          })}
+                        </table>
                       </div>
                     </div>
-                    <div className="tab-content">
-                      <div id="Current" className="active tab-pane">
-                        <div
-                          className="my-4"
-                          style={{ height: "400px", overflow: "scroll" }}
-                        >
-                          <table>
-                            <tr
-                              className="position-sticky text-white"
-                              style={{ top: "0", background: "#172337" }}
-                            >
-                              <th>Item</th>
-                              <th>Bid Price</th>
-                              <th>Highest Bid</th>
-                              <th>Lowest Bid</th>
-                              <th>Expires</th>
-                            </tr>
-                            {table.map((e) => {
-                              return (
-                                <tr>
-                                  <td>{e.item}</td>
-                                  <td>{e.bid}</td>
-                                  <td>{e.highest}</td>
-                                  <td>{e.lowest}</td>
-                                  <td>{e.expires}</td>
-                                </tr>
-                              );
-                            })}
-                          </table>
-                        </div>
-                      </div>
-                      <div id="Pending" className="tab-pane fade">
-                        <div
-                          className="my-4"
-                          style={{ height: "400px", overflow: "scroll" }}
-                        >
-                          <table>
-                            <tr
-                              className="position-sticky text-white"
-                              style={{ top: "0", background: "#172337" }}
-                            >
-                              <th>Item</th>
-                              <th>Bid Price</th>
-                              <th>Highest Bid</th>
-                              <th>Lowest Bid</th>
-                              <th>Expires</th>
-                            </tr>
-                            {table.map((e) => {
-                              return (
-                                <tr>
-                                  <td>{e.item}</td>
-                                  <td>{e.bid}</td>
-                                  <td>{e.highest}</td>
-                                  <td>{e.lowest}</td>
-                                  <td>{e.expires}</td>
-                                </tr>
-                              );
-                            })}
-                          </table>
-                        </div>
+                    <div id="Pending" className="tab-pane fade">
+                      <div
+                        className="my-4"
+                        style={{ height: "400px", overflow: "scroll" }}
+                      >
+                        <table>
+                          <tr
+                            className="position-sticky text-white"
+                            style={{ top: "0", background: "#172337" }}
+                          >
+                            <th>Item</th>
+                            <th>Bid Price</th>
+                            <th>Highest Bid</th>
+                            <th>Lowest Bid</th>
+                            <th>Expires</th>
+                          </tr>
+                          {table.map((e) => {
+                            return (
+                              <tr>
+                                <td>{e.item}</td>
+                                <td>{e.bid}</td>
+                                <td>{e.highest}</td>
+                                <td>{e.lowest}</td>
+                                <td>{e.expires}</td>
+                              </tr>
+                            );
+                          })}
+                        </table>
                       </div>
                     </div>
                   </div>
+                </div>
               </div>
 
               <div className="justify-content-center d-flex py-5">
