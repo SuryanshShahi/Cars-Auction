@@ -518,7 +518,7 @@ function Home() {
                     />
                     <div className="justify-content-end d-flex pr-lg-0">
                       <button
-                        className="subscribe px-5 shadow-lg btn text-white font-weight-light position-absolute"
+                        className="subscribe px-lg-5 px-4 shadow-lg btn text-white font-weight-light position-absolute"
                         style={{
                           height: "65px",
                           fontSize: "1.5rem",
