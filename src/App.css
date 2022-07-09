@@ -1,10 +1,14 @@
 body {
   background: url("./components/images/hero.png") no-repeat;
   height: fit-content;
-  
+  background-size: contain;
 }
-*{
+* {
   scroll-behavior: smooth;
+}
+.kiaSeltos::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
 }
 .arrow2 {
   opacity: 0;
@@ -26,6 +30,7 @@ body {
 
 .modalcompare {
   background: url("./components/images/hero.png") no-repeat;
+  background-size: contain;
   height: fit-content;
 }
 #interior {
@@ -34,6 +39,7 @@ body {
 .wishlist {
   background-color: white;
   border-width: thin;
+  width: max-content;
   border-color: gray;
   border-style: solid;
   color: "#FF9800";
@@ -49,6 +55,10 @@ body {
 }
 .rounded-pill {
   background-color: #ff9800;
+  width: max-content;
+  padding-inline: 20px;
+  font-size: 17px;
+  /* height: fit-content; */
 }
 .rounded-pill:hover {
   background-color: #f9a426;
@@ -116,6 +126,6 @@ body {
   color: white;
 }
 
-#newsletter{
+#newsletter {
   background: url("./components/images/footer1.png");
 }

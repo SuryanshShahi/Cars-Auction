@@ -23,7 +23,7 @@ function Home() {
   return (
     <section id="home">
       <div className="row gx-0 mb-5" style={{ marginTop: "250px" }}>
-        <div className="col-lg-6 col-md-6 col-12 justify-content-center d-flex">
+        <div className="col-lg-6 col-md-6 col-12 justify-content-center d-flex p-3">
           <div className="">
             <div
               className="text-center pb-4"
@@ -34,8 +34,8 @@ function Home() {
             <div
               className="p-3 justify-content-center d-flex bg-white"
               style={{
-                width: "400px",
-                height: "600px",
+                maxWidth: "400px",
+                maxHeight: "600px",
                 boxShadow: "grey 0px 0px 15px -3px",
                 borderRadius: "30px",
               }}
@@ -186,12 +186,11 @@ function Home() {
                   </div>
                   <div className="justify-content-center align-items-center d-flex pt-2">
                     <div
-                      className="rounded-pill border-0 px-4 py-1 mb-4 text-white mt-4"
+                      className="rounded-pill border-0 px-lg-4 py-1 mb-4 text-white mt-4"
                       style={{
                         width: "fit-content",
                         fontWeight: "500",
                         outline: "none",
-                        fontSize: "18px",
                       }}
                     >
                       Submit A Bid
@@ -226,12 +225,11 @@ function Home() {
             <div className="justify-content-center d-flex">
               <a
                 href="#"
-                className="rounded-pill border-0 px-4 py-2 mb-4 text-white mt-4 text-decoration-none"
+                className="rounded-pill border-0 px-lg-4 py-2 mb-4 text-white mt-4 text-decoration-none"
                 style={{
                   width: "fit-content",
                   fontWeight: "500",
                   outline: "none",
-                  fontSize: "18px",
                 }}
                 download
               >
@@ -241,7 +239,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="col-lg-6 col-md-6 col-12 justify-content-center d-flex">
+        <div className="col-lg-6 col-md-6 col-12 justify-content-center d-flex p-3">
           <div>
             <div
               className="text-center pb-4"
@@ -252,8 +250,8 @@ function Home() {
             <div
               className="p-3 justify-content-center d-flex bg-white"
               style={{
-                width: "400px",
-                height: "600px",
+                maxWidth: "400px",
+                maxHeight: "600px",
                 boxShadow: "grey 0px 0px 15px -3px",
                 borderRadius: "30px",
               }}
@@ -404,12 +402,11 @@ function Home() {
                   </div>
                   <div className="justify-content-center align-items-center d-flex pt-2">
                     <div
-                      className="rounded-pill border-0 px-4 py-1 mb-4 text-white mt-4"
+                      className="rounded-pill border-0 px-lg-4 py-1 mb-4 text-white mt-4"
                       style={{
                         width: "fit-content",
                         fontWeight: "500",
                         outline: "none",
-                        fontSize: "18px",
                       }}
                     >
                       Submit A Bid
@@ -444,12 +441,11 @@ function Home() {
             <div className="justify-content-center d-flex">
               <a
                 href="#"
-                className="rounded-pill border-0 px-4 py-2 mb-4 text-white mt-4 text-decoration-none"
+                className="rounded-pill border-0 px-lg-4 py-2 mb-4 text-white mt-4 text-decoration-none"
                 style={{
                   width: "fit-content",
                   fontWeight: "500",
                   outline: "none",
-                  fontSize: "18px",
                 }}
                 download
               >
@@ -479,60 +475,62 @@ function Home() {
             </span>
           </div>
         </div>
-        <div
-          className="container shadow-lg w-75 my-5 p-3"
-          style={{ borderRadius: "30px" }}
-        >
-          <div className="row">
-            <div className="col-lg-6 col-md-6 col-12">
-              <img src={newsletter} className="img-fluid" alt="newsletter" />
-            </div>
-            <div className="col-lg-6 col-md-6 col-12">
-              <span
-                className=""
-                style={{
-                  fontSize: "25px",
-                  fontWeight: "500",
-                  color: "rgb(66 7 165)",
-                }}
-              >
-                {" "}
-                Subscribe our newsletter <br></br>
-                <h1 style={{ color: "black" }}>
-                  To receive the latest news exclusive offers every week.
-                </h1>
-              </span>
-              <form
-                onSubmit={() => {
-                  swal("", "Subscribed", "success", {
-                    button: false,
-                    timer: 2000,
-                  });
-                }}
-              >
-                {" "}
-                <div className="my-5 searchbox align-content-center d-flex">
-                  <input
-                    type="email"
-                    placeholder="Enter Email"
-                    style={{ height: "65px", fontSize: "1.2rem" }}
-                    className="emailInput form-control px-4 position-relative bg-white"
-                    required
-                  />
-                  <div className="justify-content-end d-flex pr-lg-0">
-                    <button
-                      className="subscribe px-5 shadow-lg btn text-white font-weight-light position-absolute"
-                      style={{
-                        height: "65px",
-                        fontSize: "1.5rem",
-                        fontWeight: "500",
-                      }}
-                    >
-                      Subscribe
-                    </button>
+        <div className="justify-content-center d-flex mx-3">
+          <div
+            className="container shadow-lg my-5 p-3"
+            style={{ borderRadius: "30px" }}
+          >
+            <div className="row">
+              <div className="col-lg-6 col-md-6 col-12">
+                <img src={newsletter} className="img-fluid" alt="newsletter" />
+              </div>
+              <div className="col-lg-6 col-md-6 col-12">
+                <span
+                  className=""
+                  style={{
+                    fontSize: "25px",
+                    fontWeight: "500",
+                    color: "rgb(66 7 165)",
+                  }}
+                >
+                  {" "}
+                  Subscribe our newsletter <br></br>
+                  <h1 style={{ color: "black" }}>
+                    To receive the latest news exclusive offers every week.
+                  </h1>
+                </span>
+                <form
+                  onSubmit={() => {
+                    swal("", "Subscribed", "success", {
+                      button: false,
+                      timer: 2000,
+                    });
+                  }}
+                >
+                  {" "}
+                  <div className="my-5 searchbox align-content-center d-flex">
+                    <input
+                      type="email"
+                      placeholder="Enter Email"
+                      style={{ height: "65px", fontSize: "1.2rem" }}
+                      className="emailInput form-control px-4 position-relative bg-white"
+                      required
+                    />
+                    <div className="justify-content-end d-flex pr-lg-0">
+                      <button
+                        className="subscribe px-5 shadow-lg btn text-white font-weight-light position-absolute"
+                        style={{
+                          height: "65px",
+                          fontSize: "1.5rem",
+                          fontWeight: "500",
+                        }}
+                      >
+                        Subscribe
+                      </button>
+                    </div>
                   </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -598,7 +596,7 @@ function Home() {
                         <div className="px-4 pt-4" id="exterior">
                           {e.exterior}
                         </div>
-                        <div className="pt-4" id="interior">
+                        <div className="px-4 pt-4" id="interior">
                           {e.interior}
                         </div>
                       </div>
@@ -606,9 +604,9 @@ function Home() {
                   </div>
                 );
               })}
-              <div className="justify-content-center d-flex pt-3">
+              <div className="justify-content-center d-flex py-4">
                 <button
-                  className="rounded-pill border-0 text-white px-5 py-2"
+                  className="rounded-pill border-0 text-white px-lg-5 py-2"
                   style={{ outline: "none", fontWeight: "500" }}
                   onClick={show}
                 >
@@ -671,7 +669,7 @@ function Home() {
                       </div>
                     </div>
                     <hr></hr>
-                    <div className="d-flex py-3">
+                    <div className="d-flex py-3" style={{ width: "100%", overflowX: "scroll" }}>
                       <span className="fa fa-gavel fa-3x"></span>
                       <input
                         type="text"
@@ -686,11 +684,11 @@ function Home() {
                         required
                       />
                       <button
-                        className="border-0 text-white rounded-pill px-5 shadow-sm"
+                        className="border-0 text-white rounded-pill px-lg-5 shadow-sm"
                         style={{
                           outline: "none",
                           fontWeight: "500",
-                          fontSize: "1.2rem",
+                        
                         }}
                         onClick={() => setCount(count + 1)}
                       >
@@ -699,15 +697,18 @@ function Home() {
                     </div>
                     <hr></hr>
 
-                    <div className="d-flex">
+                    <div
+                      className="d-flex kiaSeltos"
+                      style={{ width: "100%", overflowX: "scroll" }}
+                    >
                       <div>
                         <button
-                          className="btn btn-primary border-0 rounded-pill px-5 shadow-sm"
+                          className="btn btn-primary border-0 rounded-pill px-lg-5 shadow-sm"
                           style={{
                             outline: "none",
                             height: "55px",
                             fontWeight: "500",
-                            fontSize: "1.2rem",
+                          
                           }}
                         >
                           BUY NOW: $4,200
@@ -715,7 +716,7 @@ function Home() {
                       </div>
                       <div className="px-5">
                         <button
-                          className="wishlist px-5 shadow-sm"
+                          className="wishlist px-lg-5 px-4 shadow-sm"
                           style={{
                             height: "55px",
                             borderRadius: "30px",
@@ -812,7 +813,7 @@ function Home() {
 
               <div className="justify-content-center d-flex py-5">
                 <button
-                  className="rounded-pill border-0 text-white px-5 py-2"
+                  className="rounded-pill border-0 text-white px-lg-5 py-2"
                   style={{ outline: "none", fontWeight: "500" }}
                   data-dismiss="modal"
                 >

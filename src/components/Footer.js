@@ -6,11 +6,11 @@ function Footer() {
   return (
     <section id="footer">
       <footer className="text-white mt-5">
-        <div className="container-fluid pt-3 px-5">
+        <div className="container-fluid pt-3 px-lg-5">
           <div className="row pt-3 px-3 pb-2">
-            <div className="col-8">
+            <div className="col-lg-8 col-12">
               <div className="row">
-                <div className="col-3">
+                <div className="col-lg-3 col-md-3 col-12 col-sm-6">
                   <span style={{ color: "#878787" }}>ABOUT</span>
                   <ul className="list-unstyled mt-2">
                     <li>Contact Us</li>
@@ -22,7 +22,7 @@ function Footer() {
                     <li>Corporate Information</li>
                   </ul>
                 </div>
-                <div className="col-3">
+                <div className="col-lg-3 col-md-3 col-12 col-sm-6">
                   <span style={{ color: "#878787" }}>HELP</span>
                   <ul className="list-unstyled mt-2">
                     <li>Payments</li>
@@ -32,7 +32,7 @@ function Footer() {
                     <li>Report Infringement</li>
                   </ul>
                 </div>
-                <div className="col-3">
+                <div className="col-lg-3 col-md-3 col-12 col-sm-6">
                   <span style={{ color: "#878787" }}>POLICY</span>
                   <ul className="list-unstyled mt-2">
                     <li>Return Policy</li>
@@ -44,7 +44,7 @@ function Footer() {
                   </ul>
                 </div>
 
-                <div className="col-3">
+                <div className="col-lg-3 col-md-3 col-12 col-sm-6">
                   <span style={{ color: "#878787" }}>
                     Registered Office Address:
                   </span>
@@ -77,7 +77,7 @@ function Footer() {
               </div>
             </div>
 
-            <div className="col-4">
+            <div className="col-lg-4 col-12 py-lg-0 py-4 pt-5">
             <form onSubmit={()=>{swal("", "Subscribed", "success", {
               button: false,
               timer: 2000,
@@ -103,11 +103,11 @@ function Footer() {
         </div>
 
         <hr></hr>
-        <div className="container-fluid px-5 py-2">
-          <div className="row pb-3 px-4">
-            <div className="col-8">
+        <div className="container-fluid px-lg-5 py-2">
+          <div className="row pb-3 px-lg-4">
+            <div className="col-lg-8 col-12">
               <div className="row">
-                <div className="col">
+                <div className="col pb-lg-0 pb-3 justify-content-center d-flex">
                   <div className="fa fa-briefcase mx-3 text-warning">
                     <span
                       className="text-white"
@@ -120,7 +120,7 @@ function Footer() {
                     </span>
                   </div>
                 </div>
-                <div className="col">
+                <div className="col pb-lg-0 pb-3 justify-content-center d-flex">
                   <div className="fa fa-star-o mx-3 text-warning">
                     <span
                       className="text-white"
@@ -133,7 +133,7 @@ function Footer() {
                     </span>
                   </div>
                 </div>
-                <div className="col">
+                <div className="col pb-lg-0 pb-3 justify-content-center d-flex">
                   <div className="fa fa-gift mx-3 text-warning">
                     <span
                       className="text-white"
@@ -146,7 +146,7 @@ function Footer() {
                     </span>
                   </div>
                 </div>
-                <div className="col">
+                <div className="col pb-lg-0 pb-3 justify-content-center d-flex">
                   <div className="fa fa-question-circle mx-3 text-warning">
                     <span
                       className="text-white"
@@ -159,7 +159,7 @@ function Footer() {
                     </span>
                   </div>
                 </div>
-                <div className="col">
+                <div className="col pb-lg-0 pb-3 justify-content-center d-flex">
                   <span
                     className="text-white"
                     style={{
@@ -172,8 +172,8 @@ function Footer() {
                 </div>
               </div>
             </div>
-            <div className="col-4">
-              <div className="col justify-content-end d-flex pr-4 mr-1">
+            <div className="col-lg-4 col-12 py-lg-0 py-3">
+              <div className="col justify-content-lg-end justify-content-center d-flex pr-4 mr-1">
                 <img
                   src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/payment-method_69e7ec.svg"
                   className="img-fluid mt-1"
