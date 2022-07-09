@@ -173,7 +173,7 @@ function Footer() {
               </div>
             </div>
             <div className="col-lg-4 col-12 py-lg-0 py-3">
-              <div className="col justify-content-lg-end justify-content-center d-flex pr-4 mr-1">
+              <div className="col justify-content-lg-end justify-content-center d-flex">
                 <img
                   src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/payment-method_69e7ec.svg"
                   className="img-fluid mt-1"
