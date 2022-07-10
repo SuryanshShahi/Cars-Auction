@@ -272,8 +272,6 @@ function Home() {
               style={{
                 maxWidth: "400px",
                 maxHeight: "600px",
-                // width: "400px",
-                // height: "600px",
                 boxShadow: "grey 0px 0px 15px -3px",
                 borderRadius: "30px",
               }}
@@ -345,7 +343,7 @@ function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="effects position-relative">
+                <div className="effects position-relative pb-4">
                   <NavLink
                     className="text-decoration-none"
                     to="/"
@@ -354,7 +352,7 @@ function Home() {
                   >
                     <div>
                       <div
-                        className="text-center text-white mt-4"
+                        className="text-center text-white mt-5"
                         style={{ fontSize: "4.6vh" }}
                       >
                         SELL YOUR CAR AT THE BEST PRICE
@@ -403,7 +401,7 @@ function Home() {
                               <option>Reg. State</option>
                             </select>
                           </div>
-                          <div className="col-6">
+                          <div className="col-6 pb-2">
                             <select>
                               <option>Mobile no.</option>
                             </select>
@@ -411,7 +409,7 @@ function Home() {
                         </div>
                       </div>
                     </div>
-                    <div className="justify-content-center align-items-center d-flex pb-3 pt-2">
+                    <div className="justify-content-center align-items-center d-flex pb-4 pt-2">
                       <div
                         className="rounded-pill border-0 px-lg-4 py-1 my-4 text-white"
                         style={{
